@@ -1,12 +1,12 @@
 import React from 'react'
-import { motion } from 'framer-motion'
+import { motion as Motion } from 'framer-motion'
 import { projects } from '../assets/assets'   // ✅ FIXED
 import ProjectCard from './ProjectCard'
 import { FaArrowRight } from 'react-icons/fa';
 
 const Projects = () => {
     return (
-        <motion.div
+        <Motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
@@ -29,7 +29,7 @@ const Projects = () => {
                         projects.map((project, index) => (
                             <ProjectCard 
                                 key={index} 
-                                project={project}   // ✅ PASS DATA
+                                project={project} 
                             />
                         ))
                     }
@@ -43,7 +43,7 @@ const Projects = () => {
                 </div>
 
             </div>
-        </motion.div>
+        </Motion.div>
     )
 }
 
