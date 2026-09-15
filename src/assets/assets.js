@@ -1,6 +1,6 @@
 import { FaLightbulb, FaPaintBrush, FaCode, FaReact, FaServer, FaMobileAlt, FaTools, FaNodeJs, FaStripe, FaVuejs, FaFire, FaDatabase, FaCloud, FaRobot } from 'react-icons/fa';
 
-import profileImg from '../assets/profile.jpeg';
+import profileImg from '../assets/pic.png';
 import projectImg1 from '../assets/project1.avif';
 import projectImg2 from '../assets/project2.avif';
 import projectImg3 from '../assets/project3.avif';
@@ -80,28 +80,28 @@ export const skills = [
 
 export const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "A full-featured online store with shopping cart, user authentication, and payment processing.",
+    title: "Library Management System",
+    description: "A system that can be use by students for get issued the books and admin can manage the students online.",
     image: projectImg1,
-    tech: ["React", "Node.js", "MongoDB", "Stripe"],
-    icons: [FaReact, FaNodeJs, FaDatabase , FaStripe],
-    demo: "#",
+    tech: ["React", "Node.js", "MongoDB"],
+    icons: [FaReact, FaNodeJs, FaDatabase],
+    demo: "fancy-panda-fdf021.netlify.app",
     code: "#",
   },
   {
-    title: "Task Management App",
+    title: "Task Management System",
     description: "A productivity application with drag-and-drop functionality and real-time updates.",
     image: projectImg2,
-    tech: ["Vue.js", "Firebase", "Tailwind CSS", "WebSockets"],
-    icons: [FaVuejs, FaFire, FaCloud , FaDatabase],
-    demo: "#",
+    tech: ["Html","Css","Javascript","Firebase", "Tailwind CSS"],
+    icons: [ FaFire, FaCloud , FaDatabase],
+    demo: "glittery-kitten-c9662f.netlify.app",
     code: "#",
   },
   {
-    title: "Fitness Tracker",
-    description: "A mobile app for tracking workouts, nutrition, and health metrics.",
+    title: "Login System",
+    description: "Develope a otp based login system that verifies the email id of user through one time password.",
     image: projectImg3,
-    tech: ["React Native", "GraphQL", "MySQL", "Chart.js"],
+    tech: ["React","tailwind css", "Node Mailer"],
     icons: [FaReact, FaDatabase],
     demo: "#",
     code: "#",
@@ -116,36 +116,27 @@ export const projects = [
     code: "#",
   },
   {
-    title: "Weather App",
-    description: "A real-time weather application with current and accurate forecasts.",
+    title: "Cafe Website",
+    description: "A modern cafe website with online ordering and reservation features.",
     image: projectImg5,
-    tech: ["Socket.IO", "React", "Node.js", "MongoDB"],
+    tech: ["React", "Node.js", "MongoDB"],
     icons: [FaReact, FaNodeJs, FaDatabase ],
-    demo: "#",
+    demo: "timely-donut-6a406f.netlify.app",
     code: "#",
   },
   {
-    title: "Digital Clock",
-    description: "A digital clock with live time and date updates.",
+    title: "Video Call Application",
+    description: "Build a private video calling application",
     image: projectImg6,
     tech: ["React", "OpenAI API", "Cloudinary", "Tailwind CSS"],
     icons: [FaRobot, FaReact, FaCloud],
-    demo: "#",
+    demo: "tourmaline-gecko-3e5a93.netlify.app",
     code: "#",
   }
 ];
 
 
 export const workData = [
-  {
-    role: "Web Developer",
-    company: "Prodigy Tech Solutions",
-    duration: " Jan 2025 - March 2025",
-    description:
-      "Developed and maintained web applications for various clients, focusing on responsive design and performance optimization. Builds various projects and learns web development technologies.",
-    color: "pink"
-  },
-
   {
     role: "Web Developer",
     company: "Haridwar University",

@@ -1,5 +1,5 @@
 import React from 'react'
-import { motion } from 'framer-motion'
+import { motion as Motion } from 'framer-motion'
 import { FaReact, FaNodeJs, FaDatabase, FaPython, FaCode } from "react-icons/fa"
 
 /* ✅ Define skills */
@@ -32,7 +32,7 @@ const skills = [
 
 const Skills = () => {
     return (
-        <motion.div
+        <Motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -81,7 +81,7 @@ const Skills = () => {
                 </div>
 
             </div>
-        </motion.div>
+        </Motion.div>
     )
 }
 

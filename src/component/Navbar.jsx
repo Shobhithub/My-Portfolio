@@ -1,99 +1,168 @@
-import {nav} from 'framer-motion/client';
-import React from 'react'
-import { FaBars} from 'react-icons/fa';
-import { FaXmark} from 'react-icons/fa6';
-import { useState } from 'react';
+import React, { useState } from 'react'
+import { FaBars } from 'react-icons/fa'
+import { FaXmark } from 'react-icons/fa6'
 
-const Navbar = ()=>{
+const Navbar = () => {
+    const [showMenu, setShowMenu] = useState(false)
 
-    const [showMenu, setShowMenu] = useState(false);
+    const closeMenu = () => {
+        setShowMenu(false)
+    }
 
-    return(
-        <nav className = 'fixed w-full z-50 bg-dark-100/90 backdrop-blur-sm py-4 px-8 shadow-lg'>
+    return (
+        <nav className="fixed top-0 left-0 w-full z-50 bg-dark-100/90 backdrop-blur-sm shadow-lg">
 
-            <div className='cointainer mx-auto flex justify-between items-center'>
-                <div>
-                    <a href="#" className='text-3xl font-bold text-white'>
-                        Anshika  
-                        <span className='text-purple'> Joshi</span>
-                        <div className='w-4 h-4 bg-purple rounded-full'></div>
-                    </a>
-                </div>
-                <div className='hidden md:flex space-x-10'>
-                    <a href="#home" className='relative text-white/80 transition duration-300 hover:text-purple group'>
-                        <span>Home</span>
-                        <span className='absolute left-0 bottom-1 w-0 h-0.5 bg-purple transition-all duration-300 group-hover:w-full'></span>
-                    </a>
-                    <a href="#about" className='relative text-white/80 transition duration-300 hover:text-purple group'>
-                        <span>About</span>
-                        <span className='absolute left-0 bottom-1 w-0 h-0.5 bg-purple transition-all duration-300 group-hover:w-full'></span>
-                    </a>
-                    <a href="#skills" className='relative text-white/80 transition duration-300 hover:text-purple group'>
-                        <span>Skills</span>
-                        <span className='absolute left-0 bottom-1 w-0 h-0.5 bg-purple transition-all duration-300 group-hover:w-full'></span>
-                    </a>
-                    <a href="#projects" className='relative text-white/80 transition duration-300 hover:text-purple group'>
-                        <span>Projects</span>
-                        <span className='absolute left-0 bottom-1 w-0 h-0.5 bg-purple transition-all duration-300 group-hover:w-full'></span>
-                    </a>
-                    <a href="#experience" className='relative text-white/80 transition duration-300 hover:text-purple group'>
-                        <span>Experience</span>
-                        <span className='absolute left-0 bottom-1 w-0 h-0.5 bg-purple transition-all duration-300 group-hover:w-full'></span>
-                    </a>
-                    <a href="#contact" className='relative text-white/80 transition duration-300 hover:text-purple group'>
-                        <span>Contact</span>
-                        <span className='absolute left-0 bottom-1 w-0 h-0.5 bg-purple transition-all duration-300 group-hover:w-full'></span>
-                    </a>
+            {/* Main Navbar */}
+            <div className="container mx-auto px-5 sm:px-8 py-4">
 
-                </div>
-            </div>
+                <div className="flex justify-between items-center">
 
-             {/* Mobile Menu (hidden on larger screens) */}
+                    {/* Logo */}
+                    <div>
+                        <a
+                            href="#home"
+                            onClick={closeMenu}
+                            className="text-2xl sm:text-3xl font-bold text-white inline-flex items-center"
+                        >
+                            Shobhit
+                            <span className="text-purple ml-1">
+                                Saurabh
+                            </span>
 
-
-            <div className='md:hidden mt-4 space-y-4'>
-                <FaBars onClick={() => setShowMenu(!showMenu)} className='text-2xl text-white cursor-pointer' />
-                <FaXmark onClick={() => setShowMenu(!showMenu)} className='text-2xl text-white cursor-pointer' />
-            </div>
-
-            {/* Mobile menus */}
-
-
-
-            {
-                showMenu && (
-                    <div className='md:hidden mt-4 bg-dark-300 h-screen rounded-lg p-4 flex flex-col space-y-4'>
-                        <a onClick={() => setShowMenu(!showMenu)} href="#home" className='relative text-white/80 transition duration-300 hover:text-purple group'>
-                            <span>Home</span>
-                            
-                        </a>
-                        <a onClick={() => setShowMenu(!showMenu)} href="#about" className='relative text-white/80 transition duration-300 hover:text-purple group'>
-                            <span>About</span>
-                            
-                        </a>
-                        <a onClick={() => setShowMenu(!showMenu)} href="#skills" className='relative text-white/80 transition duration-300 hover:text-purple group'>
-                            <span>Skills</span>
-                            
-                        </a>
-                        <a onClick={() => setShowMenu(!showMenu)} href="#projects" className='relative text-white/80 transition duration-300 hover:text-purple group'>
-                            <span>Projects</span>
-                            
-                        </a>
-                        <a onClick={() => setShowMenu(!showMenu)} href="#experience" className='relative text-white/80 transition duration-300 hover:text-purple group'>
-                            <span>Experience</span>
-                            
-                        </a>
-                        <a onClick={() => setShowMenu(!showMenu)} href="#contact" className='relative text-white/80 transition duration-300 hover:text-purple group'>
-                            <span>Contact</span>
+                            <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-purple rounded-full ml-1 mt-4"></span>
                         </a>
                     </div>
-                )
-            }
 
+                    {/* Desktop Menu */}
+                    <div className="hidden md:flex items-center space-x-6 lg:space-x-10">
 
+                        <a
+                            href="#home"
+                            className="relative text-white/80 transition duration-300 hover:text-purple group"
+                        >
+                            <span>Home</span>
+                            <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-purple transition-all duration-300 group-hover:w-full"></span>
+                        </a>
 
+                        <a
+                            href="#about"
+                            className="relative text-white/80 transition duration-300 hover:text-purple group"
+                        >
+                            <span>About</span>
+                            <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-purple transition-all duration-300 group-hover:w-full"></span>
+                        </a>
 
+                        <a
+                            href="#skills"
+                            className="relative text-white/80 transition duration-300 hover:text-purple group"
+                        >
+                            <span>Skills</span>
+                            <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-purple transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+
+                        <a
+                            href="#projects"
+                            className="relative text-white/80 transition duration-300 hover:text-purple group"
+                        >
+                            <span>Projects</span>
+                            <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-purple transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+
+                        <a
+                            href="#experience"
+                            className="relative text-white/80 transition duration-300 hover:text-purple group"
+                        >
+                            <span>Experience</span>
+                            <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-purple transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+
+                        <a
+                            href="#contact"
+                            className="relative text-white/80 transition duration-300 hover:text-purple group"
+                        >
+                            <span>Contact</span>
+                            <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-purple transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+
+                    </div>
+
+                    {/* Mobile Menu Button */}
+                    <button
+                        type="button"
+                        onClick={() => setShowMenu(!showMenu)}
+                        className="md:hidden text-white text-2xl p-2 focus:outline-none"
+                        aria-label="Toggle menu"
+                        aria-expanded={showMenu}
+                    >
+                        {showMenu ? <FaXmark /> : <FaBars />}
+                    </button>
+
+                </div>
+
+                {/* Mobile Menu */}
+                <div
+                    className={`md:hidden overflow-hidden transition-all duration-300 ${
+                        showMenu
+                            ? 'max-h-96 opacity-100 mt-4'
+                            : 'max-h-0 opacity-0'
+                    }`}
+                >
+                    <div className="bg-dark-300 rounded-xl p-5 flex flex-col space-y-4 shadow-lg">
+
+                        <a
+                            href="#home"
+                            onClick={closeMenu}
+                            className="text-white/80 hover:text-purple transition duration-300 py-2"
+                        >
+                            Home
+                        </a>
+
+                        <a
+                            href="#about"
+                            onClick={closeMenu}
+                            className="text-white/80 hover:text-purple transition duration-300 py-2"
+                        >
+                            About
+                        </a>
+
+                        <a
+                            href="#skills"
+                            onClick={closeMenu}
+                            className="text-white/80 hover:text-purple transition duration-300 py-2"
+                        >
+                            Skills
+                        </a>
+
+                        <a
+                            href="#projects"
+                            onClick={closeMenu}
+                            className="text-white/80 hover:text-purple transition duration-300 py-2"
+                        >
+                            Projects
+                        </a>
+
+                        <a
+                            href="#experience"
+                            onClick={closeMenu}
+                            className="text-white/80 hover:text-purple transition duration-300 py-2"
+                        >
+                            Experience
+                        </a>
+
+                        <a
+                            href="#contact"
+                            onClick={closeMenu}
+                            className="text-white/80 hover:text-purple transition duration-300 py-2"
+                        >
+                            Contact
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
         </nav>
     )
 }
-export default Navbar;
+
+export default Navbar
