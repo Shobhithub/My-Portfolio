@@ -388,8 +388,7 @@ export const projects = [
 
         tech: [
             "React",
-            "Node.js",
-            "MongoDB"
+            "Node.js"
         ],
 
         icons: [
@@ -442,6 +441,8 @@ export const projects = [
 // ===============================
 // Work Experience
 // ===============================
+
+//This is New assets.js
 
 export const workData = [
     {
